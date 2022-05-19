@@ -1,5 +1,11 @@
 # 체육복 문제 재 도전 (테스트케이스 9/10 통과)
 
+def main():
+    print(solution(5,[2,3,4],[3,4,5])==4)
+    print(solution(5, [2,4], [1,3,5])==5)
+    print(solution(5, [2,4],[3])==4)
+    print(solution(3,[3],[1])==2)
+    
 def solution(n, lost, reserve):
     answer = 0
     list=[] # 빌린 학생의 번호
@@ -25,3 +31,5 @@ def solution(n, lost, reserve):
     
     answer = n-(len(lost)-len(list))
     return answer
+
+main()
