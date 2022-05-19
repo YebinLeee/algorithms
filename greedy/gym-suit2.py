@@ -10,6 +10,9 @@ def solution(n, lost, reserve):
     answer = 0
     list=[] # 빌린 학생의 번호
     
+    lost.sort()
+    reserve.sort()
+    
     # lost, reserve 중복 제거
     for i in lost:
         if i in reserve:
