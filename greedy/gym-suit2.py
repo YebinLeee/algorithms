@@ -26,7 +26,7 @@ def solution(n, lost, reserve):
         if i-1 in reserve:
             if i not in list:
                 list.append(i)
-                reserve.remove(i-1)
+                reserve.remove(i-1)               
         # 뒷번호에게 빌리기
         elif i+1 in reserve:
             if i not in list:
