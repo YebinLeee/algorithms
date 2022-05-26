@@ -8,32 +8,32 @@ def main():
     
 def solution(n, lost, reserve):
     answer = 0
-    list=[] # 빌린 학생의 번호
+    lent_numbers=[] # 빌린 학생의 번호
     
     # 오름차순 정렬
     lost.sort()
     reserve.sort()
     
     # lost, reserve 중복으로 포함된 학생 제거
-    for i in lost:
-        if i in reserve:
-            list.append(i)
-            reserve.remove(i)
+    for number in lost:
+        if number in reserve:
+            lent_numbers.append(number)
+            reserve.remove(number)
     
     # 빌릴 수 있는 학생 제거
-    for i in lost:
+    for number in lost:
         # 앞번호에게 빌리기
-        if i-1 in reserve:
-            if i not in list:
-                list.append(i)
-                reserve.remove(i-1)               
+        if number-1 in reserve:
+            if number not in lent_numbers:
+                lent_numbers.append(number)
+                lent_numbers.remove(number-1)               
         # 뒷번호에게 빌리기
-        elif i+1 in reserve:
-            if i not in list:
-                list.append(i)
-                reserve.remove(i+1) 
+        elif number+1 in reserve:
+            if number not in lent_numbers:
+                lent_numbers.append(number)
+                reserve.remove(number+1) 
     
-    answer = n-(len(lost)-len(list))
+    answer = n-(len(lost)-len(lent_numbers))
     return answer
 
 main()
