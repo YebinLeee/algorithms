@@ -26,7 +26,7 @@ def solution(N, number):
       answer = i
       return answer
 
-  answer -1
+  answer = -1
   return answer
 
 
