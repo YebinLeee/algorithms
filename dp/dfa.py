@@ -26,10 +26,10 @@ def solution(N, number):
       answer = i
       return answer
 
-  answer -1
+  answer = -1
   return answer
 
 
 print(solution(5,12)) # 5로 12 만들기 ((55+5)/5)
 print(solution(2,11)) # 2로 11 만들기 ( 22/2 )
-print(solution(3,14))
+print(solution(2, 111))
