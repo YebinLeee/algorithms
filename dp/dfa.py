@@ -6,6 +6,7 @@ def solution(N, number):
     for i in range(1,9):
         # i : number 사용 횟수
         arr = [int(str(N)*(i+1))] # 5, 55, 555, (N을 이어붙인 수)
+        
         # dp[j]과 dp[i-j]에 대한 연산
         for j in range(0, i//2+1):
             for k in dp[j]:
